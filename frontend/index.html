@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo-App</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">✓</div>
+        <div>
+          <h1>Todo</h1>
+          <p class="sub">Web todo app</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <div class="pill" id="stats">0 items</div>
+
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme" title="Light/Dark">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="card">
+      <form id="form" class="add">
+        <input id="text" placeholder="Thêm việc cần làm..." autocomplete="off" />
+        <button type="submit" class="primary">Add</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="segmented" role="tablist" aria-label="Filters">
+          <button type="button" data-filter="all" class="seg active">All</button>
+          <button type="button" data-filter="active" class="seg">Active</button>
+          <button type="button" data-filter="done" class="seg">Done</button>
+        </div>
+
+        <div class="right-tools">
+          <button type="button" id="clearDone" class="ghost">Clear done</button>
+        </div>
+      </div>
+
+      <ul id="list" class="list"></ul>
+
+      <footer class="foot">
+        <span class="hint">.</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
